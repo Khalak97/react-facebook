@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./MessageSender.css";
 
@@ -8,8 +8,14 @@ import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
 import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 
 function MessageSender() {
+  const [input, setInput] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    setInput("");
+    setImageUrl("");
   };
 
   return (
@@ -17,14 +23,22 @@ function MessageSender() {
       <div className="messageSender__top">
         <Avatar />
         <form>
-          <input className="messageSender__input" placeholder="Whats's new ?" />
-          <input type="text" placeholder="image URL (optional)" />
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            className="messageSender__input"
+            placeholder="Whats's new ?"
+          />
+          <input
+            value={imageUrl}
+            onChange={(e) => setImageUrl(e.target.value)}
+            placeholder="image URL (optional)"
+          />
           <button onClick={handleSubmit} type="submit">
             Hidden submit
           </button>
         </form>
       </div>
-
       <div className="messageSender__bottom">
         <div className="messageSender__option">
           <VideocamIcon style={{ color: "red" }} />
