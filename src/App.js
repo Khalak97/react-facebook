@@ -2,11 +2,11 @@ import React from "react";
 
 import "./App.css";
 
-import Login from "./Login";
-import Header from "./Header";
-import Sidebar from "./Sidebar";
-import Feed from "./Feed";
-import Widgets from "./Widgets";
+import Login from "./Components/Login/Login";
+import Header from "./Components/Header/Header";
+import Sidebar from "./Components/Sidebar/Sidebar";
+import Feed from "./Components/Feed/Feed";
+import Widgets from "./Components/Widgets/Widgets";
 
 function App() {
   const user = null;

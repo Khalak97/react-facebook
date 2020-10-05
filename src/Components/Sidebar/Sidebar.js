@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Sidebar.css";
 
-import SidebarRow from "./SidebarRow";
+import SidebarRow from "../Sidebar/SidebarRow";
 
 import { Avatar } from "@material-ui/core";
 import EmojiFlagsIcon from "@material-ui/icons/EmojiFlags";
